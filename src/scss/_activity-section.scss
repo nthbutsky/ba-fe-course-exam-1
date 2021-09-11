@@ -1,0 +1,62 @@
+@import "_mixins.scss";
+
+.activity-section {
+  position: relative;
+  max-height: 260px;
+  max-width: 350px;
+  margin-top: 70px;
+  background-color: $clr-section-bg;
+
+  &__title {
+    top: -40px;
+    @include section-title;
+  }
+
+  &__bar-gr {
+    top: -17px;
+    @include section-title-bar;
+  }
+
+  &__genre-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: space-evenly;
+    max-height: 260px;
+    padding: 10px;
+
+    @include activity-section__icon;
+  }
+
+  &__more-btn-container {
+    position: absolute;
+    bottom: -20px;
+    right: 0;
+    padding: 5px 35px 5px 10px;
+    font-family: "Open Sans Italic";
+    font-size: 0.75rem;
+    color: $clr-gr-light;
+    background-color: $clr-section-bg;
+    transition: all 0.3s ease-in-out;
+
+    &:hover {
+      cursor: pointer;
+      color: $clr-main-light;
+    }
+
+    &:hover::after {
+      font-weight: bold;
+    }
+
+    &::after {
+      content: "+";
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      padding: 5px 8px;
+      background-color: $clr-blk;
+      color: $clr-main-accent;
+    }
+  }
+}

@@ -1,0 +1,95 @@
+.header {
+  width: 100%;
+  max-width: 1100px;
+  display: flex;
+  align-items: center;
+  margin: 20px 0;
+
+  &__logo-container {
+    position: relative;
+    margin: 0 50px;
+  }
+
+  &__logo {
+    height: 102px;
+  }
+
+  &__logo-text {
+    position: absolute;
+    top: 62px;
+    right: 0;
+    transform: rotate(-17deg);
+    font-family: "Open Sans Italic";
+    font-weight: bold;
+  }
+
+  &__nav {
+    height: 100px;
+    width: 750px;
+    margin-left: 50px;
+  }
+
+  &__nav-menu-btn {
+    display: none;
+    float: right;
+    position: absolute;
+    z-index: 4;
+    top: 45px;
+    right: 25px;
+    cursor: pointer;
+
+    &:hover .header__nav-menu-btn-bar {
+      background-color: $clr-main-accent;
+    }
+  }
+
+  &__nav-menu-btn-bar {
+    display: block;
+    width: 30px;
+    height: 2px;
+    margin: 10px 0;
+    background-color: $clr-main-light;
+    transition: all 0.3s ease-in-out;
+  }
+
+  &__nav-list {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border-bottom: 1px solid $clr-bar-gr;
+  }
+
+  &__nav-item {
+    margin: 20px;
+    font-size: 0.875rem;
+    text-transform: uppercase;
+
+    &:nth-child(1) {
+      margin-left: 0;
+    }
+
+    &:nth-child(6) {
+      margin-right: 0;
+    }
+
+    & a {
+      padding-bottom: 17px;
+      transition: all 0.3s ease-in-out;
+
+      &:hover {
+        color: $clr-main-accent;
+        border-bottom: 3px solid $clr-main-accent;
+        animation: nav-item-bar-smooth-move 0.5s ease-in-out;
+
+        @keyframes nav-item-bar-smooth-move {
+          0% {
+            padding-bottom: 5px;
+          }
+          100% {
+            padding-bottom: 17px;
+          }
+        }
+      }
+    }
+  }
+}

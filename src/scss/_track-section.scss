@@ -1,0 +1,186 @@
+.track-section {
+  position: relative;
+  width: 100%;
+  margin: 50px 0 0 0;
+  background-color: $clr-section-bg;
+
+  &__title {
+    top: -40px;
+    @include section-title;
+  }
+
+  &__bar-gr {
+    top: -17px;
+    @include section-title-bar;
+  }
+
+  &__arrow-left {
+    position: absolute;
+    top: -43px;
+    right: 30px;
+    height: 19px;
+    width: 19px;
+    border-radius: 50%;
+    background-color: $clr-main-accent;
+    transition: all 0.3s ease-in-out;
+
+    &:hover {
+      transform: scale(1.1);
+      cursor: pointer;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 6px;
+      left: 7px;
+      height: 5px;
+      width: 5px;
+      border-left: 2px solid $clr-blk;
+      border-top: 2px solid $clr-blk;
+      transform: rotate(-45deg);
+    }
+  }
+
+  &__arrow-right {
+    position: absolute;
+    top: -43px;
+    right: 0;
+    height: 19px;
+    width: 19px;
+    border-radius: 50%;
+    background-color: $clr-main-accent;
+    transition: all 0.3s ease-in-out;
+
+    &:hover {
+      transform: scale(1.1);
+      cursor: pointer;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 6px;
+      left: 5px;
+      height: 5px;
+      width: 5px;
+      border-left: 2px solid $clr-blk;
+      border-top: 2px solid $clr-blk;
+      transform: rotate(135deg);
+    }
+  }
+
+  &__img-track-container {
+    max-height: 200px;
+    width: 100%;
+    display: flex;
+  }
+
+  &__image {
+    height: 200px;
+  }
+
+  &__track-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    padding: 15px 0 10px 20px;
+  }
+
+  &__artist-name {
+    text-transform: uppercase;
+    font-size: 0.875rem;
+    color: $clr-main-accent;
+  }
+
+  &__album-name {
+    font-family: "Open Sans Regular";
+    font-size: 0.75rem;
+    margin: 5px 0 20px 0;
+    color: $clr-gr-light;
+  }
+
+  &__track {
+    display: flex;
+    align-items: center;
+    font-family: "Open Sans Regular";
+    font-size: 0.75rem;
+    margin: 5px 0;
+    color: $clr-gr-light;
+    transition: all 0.3s ease-in-out;
+
+    &:hover {
+      cursor: pointer;
+      color: $clr-main-light;
+    }
+
+    &:active .track-section__track-btn {
+      border-color: $clr-main-accent;
+
+      &::after {
+        top: 5px;
+        left: 5px;
+        width: 6px;
+        height: 6px;
+        background-color: $clr-main-accent;
+        border-top: none;
+        border-left: none;
+        border-right: none;
+        border-bottom: none;
+      }
+    }
+  }
+
+  &__track-btn {
+    position: relative;
+    min-height: 21px;
+    min-width: 21px;
+    border-radius: 50%;
+    border: 3px solid $clr-main-light;
+    margin-right: 10px;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 6px;
+      left: 4px;
+      border-left: 4px solid transparent;
+      border-right: 4px solid transparent;
+      border-bottom: 4px solid $clr-main-light;
+      transform: rotate(90deg);
+    }
+  }
+
+  &__more-btn-container {
+    position: absolute;
+    bottom: -20px;
+    right: 0;
+    padding: 5px 35px 5px 10px;
+    font-family: "Open Sans Italic";
+    font-size: 0.75rem;
+    color: $clr-gr-light;
+    background-color: $clr-section-bg;
+    transition: all 0.3s ease-in-out;
+
+    &:hover {
+      cursor: pointer;
+      color: $clr-main-light;
+    }
+
+    &:hover::after {
+      font-weight: bold;
+    }
+
+    &::after {
+      content: "+";
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      padding: 5px 8px;
+      background-color: $clr-blk;
+      color: $clr-main-accent;
+    }
+  }
+}

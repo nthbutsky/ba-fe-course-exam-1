@@ -1,0 +1,106 @@
+.playlist-section {
+  position: relative;
+  display: flex;
+  max-height: 260px;
+  max-width: 350px;
+  margin-top: 70px;
+  background-color: $clr-section-bg;
+
+  &__title {
+    top: -40px;
+    @include section-title;
+  }
+
+  &__bar-gr {
+    top: -17px;
+    @include section-title-bar;
+  }
+
+  &__track-container {
+    display: flex;
+    flex-direction: column;
+    padding: 10px 20px;
+  }
+
+  &__track {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    font-family: "Open Sans Regular";
+    font-size: 0.75rem;
+    margin: 5px 0;
+    color: $clr-gr-light;
+
+    &:hover {
+      cursor: pointer;
+      color: $clr-main-light;
+    }
+
+    &:active .playlist-section__track-btn {
+      border-color: $clr-main-accent;
+
+      &::after {
+        top: 5px;
+        left: 5px;
+        width: 6px;
+        height: 6px;
+        background-color: $clr-main-accent;
+        border-top: none;
+        border-left: none;
+        border-right: none;
+        border-bottom: none;
+      }
+    }
+  }
+
+  &__track-btn {
+    position: relative;
+    min-height: 21px;
+    min-width: 21px;
+    border-radius: 50%;
+    border: 3px solid $clr-main-light;
+    margin-right: 10px;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 6px;
+      left: 4px;
+      border-left: 4px solid transparent;
+      border-right: 4px solid transparent;
+      border-bottom: 4px solid $clr-main-light;
+      transform: rotate(90deg);
+    }
+  }
+
+  &__more-btn-container {
+    position: absolute;
+    bottom: -20px;
+    right: 0;
+    padding: 5px 35px 5px 10px;
+    font-family: "Open Sans Italic";
+    font-size: 0.75rem;
+    color: $clr-gr-light;
+    background-color: $clr-section-bg;
+    transition: all 0.3s ease-in-out;
+
+    &:hover {
+      cursor: pointer;
+      color: $clr-main-light;
+    }
+
+    &:hover::after {
+      font-weight: bold;
+    }
+
+    &::after {
+      content: "+";
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      padding: 5px 8px;
+      background-color: $clr-blk;
+      color: $clr-main-accent;
+    }
+  }
+}

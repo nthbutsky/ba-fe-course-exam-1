@@ -1,0 +1,35 @@
+.search-section {
+  position: relative;
+  max-width: 300px;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: $clr-section-bg;
+
+  &__input {
+    height: 30px;
+    width: 260px;
+    margin: 25px 15px;
+    border: none;
+    border-radius: 25px;
+    background-color: hsl(240, 4%, 13%);
+    color: $clr-main-light;
+    padding-left: 15px;
+
+    &::placeholder {
+      font-family: "Open Sans Semibold";
+    }
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  &__icon {
+    position: absolute;
+    top: 32px;
+    right: 30px;
+    height: 15px;
+  }
+}

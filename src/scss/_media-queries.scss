@@ -1,0 +1,241 @@
+@media screen and (max-width: 1150px) {
+  .main {
+    column-gap: 20px;
+  }
+
+  .header {
+    margin-top: 0;
+
+    &__nav-list {
+      display: none;
+
+      &_active {
+        display: flex;
+        background-color: hsla(0, 0%, 0%, 0.85);
+        height: 100vh;
+        width: 100vw;
+        position: fixed;
+        top: 0;
+        right: 0;
+        z-index: 3;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+    }
+
+    &__nav-item {
+      margin-left: 0;
+      margin-right: 0;
+    }
+
+    &__nav-menu-btn {
+      background-color: hsl(240, 4%, 13%);
+      padding: 0 10px;
+      display: block;
+      position: fixed;
+      transition: all 0.3s ease-in-out;
+
+      &_active {
+        top: 35px;
+        padding: 0 20px 20px 20px;
+        background-color: transparent;
+      }
+
+      &_active .header__nav-menu-btn-bar:nth-child(2) {
+        opacity: 0;
+      }
+      &_active .header__nav-menu-btn-bar:nth-child(1) {
+        transform: translateY(22px) rotate(45deg);
+      }
+      &_active .header__nav-menu-btn-bar:nth-child(3) {
+        transform: translateY(-2px) rotate(-45deg);
+      }
+    }
+
+    &__logo {
+      height: 80px;
+    }
+
+    &__logo-text {
+      top: 50px;
+    }
+  }
+
+  .artist-section {
+    &__image {
+      background-position: 40%;
+    }
+  }
+
+  .album-section {
+    flex-direction: column;
+
+    &__container {
+      width: 100%;
+      margin-top: 20px;
+
+      &:nth-child(1) {
+        margin-top: 40px;
+      }
+    }
+
+    &__image-1 {
+      top: 5px;
+      left: 55%;
+      height: 120px;
+    }
+
+    &__image-2 {
+      top: 5px;
+      right: 55%;
+      height: 120px;
+    }
+
+    &__image-3 {
+      top: 25px;
+      left: 40%;
+      height: 120px;
+    }
+
+    &__text {
+      width: 100%;
+    }
+  }
+}
+
+@media screen and (max-width: 1080px) {
+  .main__section-2 {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 2;
+    grid-row-end: 7;
+  }
+
+  .main__section-6 {
+    grid-column-start: 2;
+    grid-column-end: 4;
+    grid-row-start: 5;
+    grid-row-end: 6;
+    max-width: 100%;
+  }
+
+  .main__section-7 {
+    grid-column-start: 2;
+    grid-column-end: 4;
+    grid-row-start: 6;
+    grid-row-end: 7;
+    max-width: 100%;
+  }
+
+  .playlist-section {
+    &__track-container {
+      width: 100%;
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
+
+    &__track {
+      width: 300px;
+    }
+
+    &__genre-container {
+      flex-direction: column;
+      align-content: space-around;
+    }
+  }
+}
+
+@media screen and (max-width: 940px) {
+  .track-section {
+    &__img-track-container {
+      max-height: 350px;
+    }
+
+    &__image {
+      margin: 20px 0 20px 20px;
+    }
+
+    &__track-container {
+      flex-direction: column;
+      flex-wrap: nowrap;
+      justify-content: flex-start;
+    }
+  }
+}
+
+@media screen and (max-width: 880px) {
+  .activity-section {
+    max-height: 266px;
+
+    &__genre-container {
+      max-height: 266px;
+    }
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .track-section {
+    &__img-track-container {
+      flex-direction: column;
+      align-items: flex-start;
+      max-height: 585px;
+    }
+
+    &__image {
+      margin-bottom: 0;
+    }
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .activity-section {
+    max-height: 350px;
+
+    &__genre-container {
+      max-height: 350px;
+    }
+  }
+
+  .playlist-section__track {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
+
+@media screen and (max-width: 630px) {
+  .main {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .search-section {
+    max-width: initial;
+
+    &__container {
+      padding: 25px;
+      width: 100%;
+    }
+
+    &__input {
+      margin: 0;
+      width: 100%;
+    }
+  }
+
+  .dashboard-section {
+    max-width: 100%;
+  }
+
+  .artist-section__image {
+    height: 230px;
+    background-position: 30%;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .main__modal {
+    display: flex;
+  }
+}
